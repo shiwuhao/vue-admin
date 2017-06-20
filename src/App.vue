@@ -1,35 +1,7 @@
 <template>
   <div id="app">
-    <el-row :gutter="0">
-      <el-col :xs="8" :sm="14" :md="8" :lg="6"><div class="grid-content bg-purple"><h1>献县跑团</h1></div></el-col>
-      <el-col :xs="16" :sm="10" :md="16" :lg="18">
-        <el-row>
-          <el-col :xs="16" :sm="10" :md="16" :lg="18">
-            <div class="grid-content bg-purple">
-              <div class="el-icon-d-arrow-left"></div>
-            </div>
-          </el-col>
-          <el-col :xs="8" :sm="14" :md="8" :lg="6">
-            <div class="grid-content bg-purple">
-              <div><span>jeeny</span><img src="" alt="" width="50" height="50"></div>
-            </div>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
-    <el-row :gutter="0">
-      <el-col :xs="8" :sm="14" :md="8" :lg="6">
-        <div class="grid-content bg-purple">
-          <router-view name="sidenav"></router-view>
-        </div>
-      </el-col>
-      <el-col :xs="16" :sm="10" :md="16" :lg="18">
-        <div class="grid-content bg-purple-light">
-          <router-view name="views"></router-view>
-          <router-view name="page"></router-view>
-        </div>
-      </el-col>
-    </el-row>
+    <router-view></router-view>
+
   </div>
 </template>
 
@@ -40,7 +12,6 @@ export default {
       msg: 'Use Vue 2.0 Today!'
     }
   },
-
   methods: {
     startHacking () {
       this.$notify({
@@ -58,6 +29,13 @@ body {
   font-family: Helvetica, sans-serif;
 }
 *{margin:0;padding: 0;}
+.el-col{border-radius: 0 !important;}
+.clearfix:after{display: block;content:'';clear:both;}
+.clearfix{zoom:1;}
+.gap{margin:10px 0 20px;}
+.fl{float: left;}
+.fr{float: right;}
+.title{font-size: 18px;margin-bottom: 10px;}
 li{list-style: none;}
 .el-col {
   border-radius: 4px;

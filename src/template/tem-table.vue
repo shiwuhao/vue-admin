@@ -23,7 +23,7 @@
     </el-table-column>
     <el-table-column
             prop="address"
-            label="地址"
+                    label="地址"
             :formatter="formatter">
     </el-table-column>
     <el-table-column label="操作">

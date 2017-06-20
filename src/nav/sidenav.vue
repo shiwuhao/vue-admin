@@ -10,10 +10,15 @@
           <span class="el-icon-arrow-down"></span>
         </el-col>
       </el-row>
+      <!--<ul class="childnav">-->
+        <!--<li>子导航</li>-->
+        <!--<li>子导航2</li>-->
+        <!--<li>子导航3</li>-->
+      <!--</ul>-->
       <ul class="childnav">
-        <li>子导航</li>
-        <li>子导航2</li>
-        <li>子导航3</li>
+        <router-link tag="li" to="/table/fo" active-class="current"><span></span>子导航</router-link>
+        <router-link tag="li" to="/table/fo2" active-class="current"><span></span>子导航2</router-link>
+        <router-link tag="li" to="/table/fo3" active-class="current"><span></span>子导航3</router-link>
       </ul>
     </li>
     <li>
@@ -27,15 +32,10 @@
         </el-col>
       </el-row>
       <ul class="childnav">
-        <li>子导航</li>
-        <li>子导航2</li>
-        <li>子导航3</li>
+        <router-link tag="li" to="/theme/fo" active-class="current"><span></span>子导航</router-link>
+        <router-link tag="li" to="/theme/fo2" active-class="current"><span></span>子导航2</router-link>
+        <router-link tag="li" to="/theme/fo3" active-class="current"><span></span>子导航3</router-link>
       </ul>
     </li>
   </ul>
 </template>
-<style>
-  .sidenav .el-row{padding:6px 0;}
-  .childnav{background: #dfdfdf;line-height: 30px;padding-left:20px;}
-  .sidenav li{cursor: pointer;}
-</style>
