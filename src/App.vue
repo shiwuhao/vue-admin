@@ -33,6 +33,7 @@ body {
 .clearfix:after{display: block;content:'';clear:both;}
 .clearfix{zoom:1;}
 .gap{margin:10px 0 20px;}
+.gap2{margin:20px 0 10px;}
 .fl{float: left;}
 .fr{float: right;}
 .title{font-size: 18px;margin-bottom: 10px;}
