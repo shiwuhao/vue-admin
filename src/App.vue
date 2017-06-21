@@ -29,7 +29,6 @@ body {
   font-family: Helvetica, sans-serif;
 }
 *{margin:0;padding: 0;}
-.el-col{border-radius: 0 !important;}
 .clearfix:after{display: block;content:'';clear:both;}
 .clearfix{zoom:1;}
 .gap{margin:10px 0 20px;}

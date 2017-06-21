@@ -60,7 +60,7 @@
     }
 </script>
 <style>
-    .forms{background: #fff;margin:20px;}
+    .forms{background: #fff;}
     .forms .item{line-height:36px;}
     .forms li{margin-bottom: 10px;overflow: hidden;}
 </style>

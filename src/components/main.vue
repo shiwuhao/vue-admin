@@ -1,3 +1,4 @@
+
 <template>
     <div>
         <el-row :gutter="0" class="topbar">
@@ -6,7 +7,7 @@
                 <el-row>
                     <el-col :xs="16" :sm="10" :md="16" :lg="18">
                         <div class="grid-content ">
-                            <div class="el-icon-d-arrow-left"></div>
+                            <div class="el-icon-d-arrow-left flexbtn"></div>
                         </div>
                     </el-col>
                     <el-col :xs="8" :sm="14" :md="8" :lg="6">
@@ -62,7 +63,8 @@
                                 <router-link tag="li" to="/theme/fo2" active-class="current"><span></span>统计图</router-link>
                                 <router-link tag="li" to="/theme/fo3" active-class="current"><span></span>列表拖拽</router-link>
                                 <router-link tag="li" to="/theme/fo4" active-class="current"><span></span>分页</router-link>
-                                <router-link tag="li" to="/theme/fo5" active-class="current"><span></span>图像修改</router-link>
+                                <router-link tag="li" to="/theme/fo5" active-class="current"><span></span>图片上传</router-link>
+                                <router-link tag="li" to="/theme/fo6" active-class="current"><span></span>弹框</router-link>
                             </ul>
                         </li>
                     </ul>
@@ -90,5 +92,6 @@
     .user li:hover{color: #0074D9;}
     .username span{float:left;line-height: 40px;margin-right: 6px;}
     .username img{float: left;}
-    .views{margin:20px;}
+    .views{margin:30px 40px;}
+    .flexbtn{line-height: 40px;margin-left:40px;cursor: pointer;}
 </style>

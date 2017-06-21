@@ -16,7 +16,11 @@ Vue.use(VueRouter)
 const router=new VueRouter({
     routes
 })
-new Vue({
+const vm=new Vue({
     router,
     render: h => h(App)
 }).$mount('#app')
+
+//µ¯¿òÖ¸Áî
+
+
