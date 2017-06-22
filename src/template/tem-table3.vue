@@ -33,17 +33,6 @@
                    label="地址"
                    :formatter="formatter">
            </el-table-column>
-           <el-table-column label="操作">
-               <template scope="scope">
-                   <el-button
-                           size="small"
-                           @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                   <el-button
-                           size="small"
-                           type="danger"
-                           @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-               </template>
-           </el-table-column>
        </el-table>
    </div>
 </template>
@@ -79,13 +68,6 @@
         methods: {
             formatter(row, column) {
                 return row.address;
-            },
-            handleEdit(index, row) {
-                console.log(index, row);
-            },
-            handleDelete(index, row) {
-//                console.log(index, row);
-                this.tableData.splice(index,1)
             },
             handleCheckAllChange(event) {
                 this.checkedCities = event.target.checked ? cityOptions : [];
