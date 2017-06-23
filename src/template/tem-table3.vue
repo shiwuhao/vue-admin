@@ -33,6 +33,10 @@
                    label="地址"
                    :formatter="formatter">
            </el-table-column>
+           <el-table-column slot="append">
+
+           </el-table-column>
+           <!--<slot name="append"></slot>-->
        </el-table>
    </div>
 </template>

@@ -52,7 +52,7 @@
                             <el-row>
                                 <el-col :xs="20" :sm="20" :md="20" :lg="20">
                                     <span class="el-icon-message"></span>
-                                    <span>组件</span>
+                                    <span>基本组件</span>
                                 </el-col>
                                 <el-col :xs="4" :sm="4" :md="4" :lg="4">
                                     <span class="el-icon-arrow-down"></span>
@@ -60,11 +60,25 @@
                             </el-row>
                             <ul class="childnav">
                                 <router-link tag="li" to="/theme/fo" active-class="current"><span></span>富文本编辑器</router-link>
-                                <router-link tag="li" to="/theme/fo2" active-class="current"><span></span>统计图</router-link>
                                 <router-link tag="li" to="/theme/fo3" active-class="current"><span></span>列表拖拽</router-link>
                                 <router-link tag="li" to="/theme/fo4" active-class="current"><span></span>分页</router-link>
                                 <router-link tag="li" to="/theme/fo5" active-class="current"><span></span>图片上传</router-link>
                                 <router-link tag="li" to="/theme/fo6" active-class="current"><span></span>弹框</router-link>
+                            </ul>
+                        </li>
+                        <li>
+                            <el-row>
+                                <el-col :xs="20" :sm="20" :md="20" :lg="20">
+                                    <span class="el-icon-message"></span>
+                                    <span>图表</span>
+                                </el-col>
+                                <el-col :xs="4" :sm="4" :md="4" :lg="4">
+                                    <span class="el-icon-arrow-down"></span>
+                                </el-col>
+                            </el-row>
+                            <ul class="childnav">
+                                <router-link tag="li" to="/chart/line" active-class="current"><span></span>折线统计图</router-link>
+                                <router-link tag="li" to="/chart/bar" active-class="current"><span></span>柱统计图</router-link>
                             </ul>
                         </li>
                     </ul>
