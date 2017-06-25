@@ -1,27 +1,20 @@
 <template>
     <div>
-        <el-row>
-            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                <div>
-                    <el-button type="info" @click="alertbg=!alertbg;affirm=!affirm">确认弹框</el-button>
-                </div>
-            </el-col>
-            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                <div>
-                    <el-button type="info" @click="geterror()">失败弹框</el-button>
-                </div>
-            </el-col>
-            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                <div>
-                    <el-button type="info" @click="alertbg=!alertbg;success=!success">成功弹框</el-button>
-                </div>
-            </el-col>
-            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                <div>
-                    <el-button type="info" @click="alertbg=!alertbg;typeInfo=!typeInfo">填写信息弹框</el-button>
-                </div>
-            </el-col>
-        </el-row>
+        <ul class="clearfix poplist">
+            <li>
+                <el-button type="info" @click="alertbg=!alertbg;affirm=!affirm">确认弹框</el-button>
+            </li>
+            <li>
+                <el-button type="info" @click="geterror()">失败弹框</el-button>
+            </li>
+            <li>
+                <el-button type="info" @click="alertbg=!alertbg;success=!success">成功弹框</el-button>
+            </li>
+            <li>
+                <el-button type="info" @click="alertbg=!alertbg;typeInfo=!typeInfo">填写信息弹框</el-button>
+            </li>
+        </ul>
+
         <el-row class="fullscreen" v-show="alertbg">
             <el-col :xs="12" :sm="6" :md="6" :lg="6" class="fullcont" v-show="affirm">
                 <div class="tipword gap">确认删除吗？</div>
@@ -103,12 +96,10 @@
          },
         methods:{
             geterror(){
-                var alertbg=this.alertbg;
-                var error=this.error;
-               if(alertbg){
-                   alertbg=false;
+               if(this.alertbg){
+                   this.alertbg=false;
                }else{
-                   alertbg=true;
+                   this.alertbg=true;
                }
             }
         }
@@ -129,4 +120,5 @@
     .datalist .item-name,.datalist label{line-height: 30px;}
     .datalist input{height: 30px;line-height: 30px;}
     .datalist li{padding:6px 0;}
+    .poplist li{float: left;margin:20px;}
 </style>

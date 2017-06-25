@@ -1,14 +1,14 @@
 <template>
   <ul class="forms">
       <li>
-          <el-col :xs="2" :sm="2" :md="2" :lg="2" class="item">普通框</el-col>
-          <el-col :xs="9" :sm="9" :md="9" :lg="9">
+          <el-col :xs="5" :sm="3" :md="3" :lg="2" class="item">普通框</el-col>
+          <el-col :xs="19" :sm="19" :md="20" :lg="9">
               <el-input v-model="input" placeholder="请输入内容"></el-input>
           </el-col>
       </li>
       <li>
-          <el-col :xs="2" :sm="2" :md="2" :lg="2" class="item">禁用</el-col>
-          <el-col :xs="9" :sm="9" :md="9" :lg="9">
+          <el-col :xs="5" :sm="3" :md="3" :lg="2" class="item">禁用</el-col>
+          <el-col :xs="19" :sm="19" :md="20" :lg="9">
               <el-input
                       placeholder="请输入内容"
                       v-model="input1"
@@ -18,8 +18,8 @@
 
       </li>
       <li>
-          <el-col :xs="2" :sm="2" :md="2" :lg="2" class="item">带icon</el-col>
-          <el-col :xs="9" :sm="9" :md="9" :lg="9">
+          <el-col :xs="5" :sm="3" :md="3" :lg="2" class="item">带icon</el-col>
+          <el-col :xs="19" :sm="19" :md="20" :lg="9">
               <el-input
                       placeholder="请选择日期"
                       icon="search"
@@ -29,8 +29,8 @@
           </el-col>
       </li>
       <li>
-          <el-col :xs="2" :sm="2" :md="2" :lg="2" class="item">文本域</el-col>
-          <el-col :xs="9" :sm="9" :md="9" :lg="9">
+          <el-col :xs="5" :sm="3" :md="3" :lg="2" class="item">文本域</el-col>
+          <el-col :xs="19" :sm="19" :md="20" :lg="9">
               <el-input
                       type="textarea"
                       :rows="2"
