@@ -67,20 +67,6 @@
     </div>
 </template>
 <script>
-//    import Vue from 'vue'
-//    Vue.directive('close',{
-//        undate:function(el,binding){
-//            var alertbg=binding.value.alertbg;
-//            var error=binding.value.error;
-//            el.onclick=function(){
-//                alert(1)
-//                alertbg=!alertbg;
-//                error=!error;
-//            }
-//
-//        }
-//    })
-
     export default{
         data(){
             return {
@@ -96,11 +82,16 @@
          },
         methods:{
             geterror(){
+                this.alertbg=true;
+                this.error=true;
+                let self=this;
                if(this.alertbg){
-                   this.alertbg=false;
-               }else{
-                   this.alertbg=true;
+                    setTimeout(() => {
+                       self.alertbg = false;
+                       self.error = false;
+                   }, 1000)
                }
+
             }
         }
     }
