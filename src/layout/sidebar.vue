@@ -1,7 +1,7 @@
 
 <template>
-    <div>
-        <el-col :xs="8" :sm="6" :md="6" :lg="4" v-show="leftnav" id="sidenav">
+    <!--<el-row :gutter="0" id="sidenav">-->
+        <el-col :md="6" :lg="4" v-show="leftnav">
             <div class="grid-content bg-purple">
                 <ul class="sidenav">
                     <li>
@@ -56,8 +56,7 @@
                 </ul>
             </div>
         </el-col>
-
-    </div>
+    <!--</el-row>-->
 </template>
 <style>
     .sidenav .el-row{padding:8px 0;}
@@ -71,7 +70,6 @@
     .childnav{padding:4px 0;}
     .childnav span{margin-left:22px;}
     .childnav li{line-height: 32px;font-size: 14px;}
-
 </style>
 <script>
     export default{
