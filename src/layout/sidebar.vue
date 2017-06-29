@@ -1,7 +1,7 @@
 
 <template>
     <!--<el-row :gutter="0" id="sidenav">-->
-        <el-col :md="6" :lg="4" v-show="leftnav">
+        <el-col :md="6" :lg="4">
             <div class="grid-content bg-purple">
                 <ul class="sidenav">
                     <li>
@@ -71,13 +71,3 @@
     .childnav span{margin-left:22px;}
     .childnav li{line-height: 32px;font-size: 14px;}
 </style>
-<script>
-    export default{
-        data(){
-            return {
-                userlist:false,
-                leftnav:true
-            }
-        }
-    }
-</script>
