@@ -20,7 +20,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     .items li{padding:4px 10px;line-height: 24px;border-radius: 4px;border:1px solid #dfdfdf;}
     .items li::selection{background: #fff;}
 </style>

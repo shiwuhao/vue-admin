@@ -8,6 +8,6 @@
         </el-col>
     <!--</el-row>-->
 </template>
-<style>
+<style scoped>
     .views{margin:30px 40px;}
 </style>

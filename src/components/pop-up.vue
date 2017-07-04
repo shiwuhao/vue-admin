@@ -96,7 +96,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     .fullscreen{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
     .fullcont{position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);background: #fff;border-radius: 6px;padding-bottom:20px;}
     .tipword{line-height: 50px;text-align: center;font-size: 20px;font-weight: bold;}
@@ -112,4 +112,4 @@
     .datalist input{height: 30px;line-height: 30px;}
     .datalist li{padding:6px 0;}
     .poplist li{float: left;margin:20px;}
-</style>
+</stylescoped>

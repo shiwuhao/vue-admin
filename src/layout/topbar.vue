@@ -8,14 +8,15 @@
         <div class="grid-content user fr">
             <div class="username clearfix" @click="userlist=!userlist"><span>jeeny</span><img src="" alt="" width="40" height="40"></div>
             <ul v-show="userlist">
-                <li>首页</li>
-                <li>设置</li>
-                <li>退出</li>
+                <!--<li>首页</li>-->
+                <!--<li>退出</li>-->
+                <router-link to="/index" tag="li">首页</router-link>
+                <router-link to="/login" tag="li">退出</router-link>
             </ul>
         </div>
     </el-row>
 </template>
-<style>
+<style scoped>
     .topbar{padding:5px 15px;background: #539ff2;}
     .user{position: relative;}
     .user ul{position: absolute;top:45px;left:0;z-index:10;background: #fff;padding:6px 20px;border:1px solid #dfdfdf;border-radius: 3px;}

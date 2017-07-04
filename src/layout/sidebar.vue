@@ -58,7 +58,7 @@
         </el-col>
     <!--</el-row>-->
 </template>
-<style>
+<style scoped>
     .sidenav .el-row{padding:8px 0;}
     .childnav{background: #eee;line-height: 30px;}
     .childnav span{display: inline-block;width: 20px;}

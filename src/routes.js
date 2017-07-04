@@ -18,6 +18,7 @@ import pages from  './template/pagination.vue'
 import line from './chart/linechart.vue'
 import bar from './chart/barchart.vue'
 
+import login from './layout/login.vue'
 const routes=[
     {
         path:'',
@@ -38,6 +39,10 @@ const routes=[
                     ]
                 }
         ]
+    },
+    {
+        path:'/login',
+        component:login
     }
 ]
 export default routes;

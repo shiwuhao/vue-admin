@@ -53,4 +53,6 @@ li{list-style: none;}
   border-radius: 4px;
   min-height: 36px;
 }
+  input{border:1px solid #dfdfdf;border-radius: 5px;line-height: 26px;padding:0 4px;}
+  .white{color: #fff;}
 </style>
