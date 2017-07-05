@@ -26,14 +26,14 @@ const routes=[
         children:[
                 {path:'',components:{topbar:topbar,sidebar:sidebar,viewarea:viewarea},
                     children:[
-                        {path:'/table/fo',components:{views:temTable}},
-                        {path:'/table/fo2',components:{views:temTable2}},
-                        {path:'/table/fo3',components:{views:temTable3}},
-                        {path:'/theme/fo',components:{views:editor}},
-                        {path:'/theme/fo3',components:{views:drag}},
-                        {path:'/theme/fo4',components:{views:pages}},
-                        {path:'/theme/fo5',components:{views:pic}},
-                        {path:'/theme/fo6',components:{views:popup}},
+                        {path:'/table/tables',components:{views:temTable}},
+                        {path:'/table/form',components:{views:temTable2}},
+                        {path:'/table/selftable',components:{views:temTable3}},
+                        {path:'/theme/editor',components:{views:editor}},
+                        {path:'/theme/drag',components:{views:drag}},
+                        {path:'/theme/pages',components:{views:pages}},
+                        {path:'/theme/picupload',components:{views:pic}},
+                        {path:'/theme/popin',components:{views:popup}},
                         {path:'/chart/line',components:{views:line}},
                         {path:'/chart/bar',components:{views:bar}}
                     ]

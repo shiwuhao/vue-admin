@@ -4,53 +4,20 @@
         <el-col :md="6" :lg="4">
             <div class="grid-content bg-purple">
                 <ul class="sidenav">
-                    <li>
+                    <li v-for="(item,index) in navlist">
                         <el-row :gutter="0">
                             <el-col :xs="20" :sm="20" :md="20" :lg="20">
-                                <span class="el-icon-message icon"></span>
-                                <span>表格和表单</span>
+                                <span class="icon" :class="item.icon"></span>
+                                <span>{{item.nav}}</span>
                             </el-col>
                             <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                                <span class="el-icon-arrow-down"></span>
+                                <span :class="[item.arrow?'el-icon-arrow-up':'el-icon-arrow-down']" @click="isshow(index)"></span>
                             </el-col>
                         </el-row>
-                        <ul class="childnav">
-                            <router-link tag="li" to="/table/fo" active-class="current"><span></span>表格</router-link>
-                            <router-link tag="li" to="/table/fo2" active-class="current"><span></span>表单</router-link>
-                            <router-link tag="li" to="/table/fo3" active-class="current"><span></span>可增减表格</router-link>
-                        </ul>
-                    </li>
-                    <li>
-                        <el-row>
-                            <el-col :xs="20" :sm="20" :md="20" :lg="20">
-                                <span class="el-icon-message icon"></span>
-                                <span>基本组件</span>
-                            </el-col>
-                            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                                <span class="el-icon-arrow-down"></span>
-                            </el-col>
-                        </el-row>
-                        <ul class="childnav">
-                            <router-link tag="li" to="/theme/fo" active-class="current"><span></span>富文本编辑器</router-link>
-                            <router-link tag="li" to="/theme/fo3" active-class="current"><span></span>列表拖拽</router-link>
-                            <router-link tag="li" to="/theme/fo4" active-class="current"><span></span>分页</router-link>
-                            <router-link tag="li" to="/theme/fo5" active-class="current"><span></span>图片上传</router-link>
-                            <router-link tag="li" to="/theme/fo6" active-class="current"><span></span>弹框</router-link>
-                        </ul>
-                    </li>
-                    <li>
-                        <el-row>
-                            <el-col :xs="20" :sm="20" :md="20" :lg="20">
-                                <span class="el-icon-message icon"></span>
-                                <span>图表</span>
-                            </el-col>
-                            <el-col :xs="4" :sm="4" :md="4" :lg="4">
-                                <span class="el-icon-arrow-down"></span>
-                            </el-col>
-                        </el-row>
-                        <ul class="childnav">
-                            <router-link tag="li" to="/chart/line" active-class="current"><span></span>折线统计图</router-link>
-                            <router-link tag="li" to="/chart/bar" active-class="current"><span></span>柱统计图</router-link>
+                        <ul class="childnav" v-show="item.arrow">
+                            <router-link :to="'/'+item.parmas1+'/'+child.parmas" tag="li" v-for="child in item.child">
+                                <span></span>{{child.childnav}}
+                            </router-link>
                         </ul>
                     </li>
                 </ul>
@@ -71,3 +38,88 @@
     .childnav span{margin-left:22px;}
     .childnav li{line-height: 32px;font-size: 14px;}
 </style>
+<script>
+    export default{
+        data(){
+           return  {
+               navlist:[
+                   {
+                       nav:'表单和表格',
+                       parmas1:'table',
+                       icon:'el-icon-message',
+                       arrow:false,
+                       child:[
+                           {
+                               childnav:'表格',
+                               parmas:'tables'
+                           },
+                           {
+                               childnav:'表单',
+                               parmas:'form'
+                           },
+                           {
+                               childnav:'可增减表格',
+                               parmas:'selftable'
+                           }
+                       ]
+                   },
+                   {
+                       nav:'基本组件',
+                       parmas1:'theme',
+                       icon:'el-icon-message',
+                       arrow:false,
+                       child:[
+                           {
+                               childnav:'富文本编辑器',
+                               parmas:'editor'
+                           },
+                           {
+                               childnav:'列表拖拽',
+                               parmas:'drag'
+                           },
+                           {
+                               childnav:'分页',
+                               parmas:'pages'
+                           },
+                           {
+                               childnav:'图片上传',
+                               parmas:'picupload'
+                           },
+                           {
+                               childnav:'弹框',
+                               parmas:'popin'
+                           }
+                       ]
+                   },
+                   {
+                       nav:'图表',
+                       parmas1:'chart',
+                       icon:'el-icon-message',
+                       arrow:false,
+                       child:[
+                           {
+                               childnav:'折线图',
+                               parmas:'line'
+                           },
+                           {
+                               childnav:'柱图',
+                               parmas:'bar'
+                           }
+                       ]
+                   }
+               ]
+           }
+        },
+        methods:{
+            isshow(index){
+                this.navlist.forEach(function(e){
+                    e.arrow=false;
+                })
+                this.navlist[index].arrow=true;
+            },
+            getData(){
+                axios.get('')
+            }
+        }
+    }
+</script>
