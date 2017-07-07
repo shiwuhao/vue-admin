@@ -7,7 +7,7 @@ import App from './App.vue'
 import routes from './routes.js'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
-
+Vue.use(axios)
 // new Vue({
 //   el: '#app',
 //   render: h => h(App)

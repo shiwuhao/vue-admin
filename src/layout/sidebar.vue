@@ -15,7 +15,7 @@
                             </el-col>
                         </el-row>
                         <ul class="childnav" v-show="item.arrow">
-                            <router-link :to="'/'+item.parmas1+'/'+child.parmas" tag="li" v-for="child in item.child">
+                            <router-link :to="'/'+item.parmas1+'/'+child.parmas" tag="li" v-for="child in item.child" active-class="current">
                                 <span></span>{{child.childnav}}
                             </router-link>
                         </ul>
@@ -39,74 +39,75 @@
     .childnav li{line-height: 32px;font-size: 14px;}
 </style>
 <script>
+    import axios from 'axios'
     export default{
         data(){
            return  {
                navlist:[
-                   {
-                       nav:'表单和表格',
-                       parmas1:'table',
-                       icon:'el-icon-message',
-                       arrow:false,
-                       child:[
-                           {
-                               childnav:'表格',
-                               parmas:'tables'
-                           },
-                           {
-                               childnav:'表单',
-                               parmas:'form'
-                           },
-                           {
-                               childnav:'可增减表格',
-                               parmas:'selftable'
-                           }
-                       ]
-                   },
-                   {
-                       nav:'基本组件',
-                       parmas1:'theme',
-                       icon:'el-icon-message',
-                       arrow:false,
-                       child:[
-                           {
-                               childnav:'富文本编辑器',
-                               parmas:'editor'
-                           },
-                           {
-                               childnav:'列表拖拽',
-                               parmas:'drag'
-                           },
-                           {
-                               childnav:'分页',
-                               parmas:'pages'
-                           },
-                           {
-                               childnav:'图片上传',
-                               parmas:'picupload'
-                           },
-                           {
-                               childnav:'弹框',
-                               parmas:'popin'
-                           }
-                       ]
-                   },
-                   {
-                       nav:'图表',
-                       parmas1:'chart',
-                       icon:'el-icon-message',
-                       arrow:false,
-                       child:[
-                           {
-                               childnav:'折线图',
-                               parmas:'line'
-                           },
-                           {
-                               childnav:'柱图',
-                               parmas:'bar'
-                           }
-                       ]
-                   }
+//                   {
+//                       nav:'表单和表格',
+//                       parmas1:'table',
+//                       icon:'el-icon-message',
+//                       arrow:false,
+//                       child:[
+//                           {
+//                               childnav:'表格',
+//                               parmas:'tables'
+//                           },
+//                           {
+//                               childnav:'表单',
+//                               parmas:'form'
+//                           },
+//                           {
+//                               childnav:'可增减表格',
+//                               parmas:'selftable'
+//                           }
+//                       ]
+//                   },
+//                   {
+//                       nav:'基本组件',
+//                       parmas1:'theme',
+//                       icon:'el-icon-message',
+//                       arrow:false,
+//                       child:[
+//                           {
+//                               childnav:'富文本编辑器',
+//                               parmas:'editor'
+//                           },
+//                           {
+//                               childnav:'列表拖拽',
+//                               parmas:'drag'
+//                           },
+//                           {
+//                               childnav:'分页',
+//                               parmas:'pages'
+//                           },
+//                           {
+//                               childnav:'图片上传',
+//                               parmas:'picupload'
+//                           },
+//                           {
+//                               childnav:'弹框',
+//                               parmas:'popin'
+//                           }
+//                       ]
+//                   },
+//                   {
+//                       nav:'图表',
+//                       parmas1:'chart',
+//                       icon:'el-icon-message',
+//                       arrow:false,
+//                       child:[
+//                           {
+//                               childnav:'折线图',
+//                               parmas:'line'
+//                           },
+//                           {
+//                               childnav:'柱图',
+//                               parmas:'bar'
+//                           }
+//                       ]
+//                   }
                ]
            }
         },
@@ -118,8 +119,14 @@
                 this.navlist[index].arrow=true;
             },
             getData(){
-                axios.get('')
+                axios.get('../data/sidebar')
+                        .then(function(res){
+                            console.log(res)
+                        })
             }
+        },
+        mounted(){
+            this.getData()
         }
     }
 </script>
