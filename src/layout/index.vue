@@ -1,19 +1,8 @@
 
 <template>
-   <ul class="login">
-       <li>
-           <span>用户名:</span><input type="text" v-model="user.name"/>
-       </li>
-       <li>
-           <span>密&nbsp;&nbsp;&nbsp;&nbsp;码:</span><input type="text" v-model="user.password"/>
-       </li>
-       <li>
-           <span>&nbsp;</span><input type="checkbox" id="rember"/><label for="rember" class="black">记住密码</label>
-       </li>
-       <li class="btn-item">
-           <input type="submit" value="登录" class="login-btn" @click="tologin"/>
-       </li>
-   </ul>
+  <div>
+      index
+  </div>
 </template>
 <style scoped>
     .login{position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);border-radius: 10px;padding:20px;border:1px solid #0074e0;box-shadow: 12px 16px 23px #999;}

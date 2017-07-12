@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h">
     <router-view></router-view>
 
   </div>
@@ -28,6 +28,7 @@ export default {
 body {
   font-family: Helvetica, sans-serif;
 }
+body,html,.h{height: 100%;}
 *{margin:0;padding: 0;}
 .clearfix:after{display: block;content:'';clear:both;}
 .clearfix{zoom:1;}
@@ -55,4 +56,6 @@ li{list-style: none;}
 }
   input{border:1px solid #dfdfdf;border-radius: 5px;line-height: 26px;padding:0 4px;}
   .white{color: #fff;}
+  .black{color: #000;}
+  input{outline: none;}
 </style>

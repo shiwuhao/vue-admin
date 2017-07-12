@@ -3,7 +3,7 @@ import topbar from './layout/topbar.vue'
 import sidebar from './layout/sidebar.vue'
 import viewarea from './layout/viewarea.vue'
 
-
+import index from './layout/index.vue'
 //表单和表格
 import temTable  from './template/tem-table.vue'
 import temTable2 from './template/tem-table2.vue'
@@ -26,6 +26,7 @@ const routes=[
         children:[
                 {path:'',components:{topbar:topbar,sidebar:sidebar,viewarea:viewarea},
                     children:[
+                        {path:'',components:{views:index}},
                         {path:'/table/tables',components:{views:temTable}},
                         {path:'/table/form',components:{views:temTable2}},
                         {path:'/table/selftable',components:{views:temTable3}},

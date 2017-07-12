@@ -21,6 +21,6 @@
     }
 </script>
 <style scoped>
-    .items li{padding:4px 10px;line-height: 24px;border-radius: 4px;border:1px solid #dfdfdf;}
+    .items li{padding:4px 10px;line-height: 26px;border-radius: 4px;border:1px solid #dfdfdf;margin-bottom:14px;}
     .items li::selection{background: #fff;}
 </style>
