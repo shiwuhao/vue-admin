@@ -57,5 +57,8 @@ li{list-style: none;}
   input{border:1px solid #dfdfdf;border-radius: 5px;line-height: 26px;padding:0 4px;}
   .white{color: #fff;}
   .black{color: #000;}
+  .green{background: #11b95c;}
+  .blue{background:#3A71A8;}
+  .purple{background: purple;}
   input{outline: none;}
 </style>

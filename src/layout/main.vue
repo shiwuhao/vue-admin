@@ -22,5 +22,5 @@
         #sidenav{width: 160px;position: fixed;top:50px;left:-160px;z-index:5;}
         .shownav{left:0 !important;}
     }
-    .leftnav{background: #d3dce6;border-radius: 0;}
+    .leftnav{background: #e5e9f2;border-radius: 0;}
 </style>

@@ -1,36 +1,58 @@
 
 <template>
-  <div>
-      index
-  </div>
+    <div>
+        <div class="userindex clearfix">
+            <div class="userpic fl">
+                <img src="../assets/pic.jpg" width="150" height="150"/>
+            </div>
+            <dl class="statistics fl">
+                <dt>超级管理员-十五号</dt>
+                <dd><span>{{animate(444)}}</span><i class="icon el-icon-message"></i></dd>
+                <dd><countTo :startVal='0' :endVal='item.form' :duration='3600'>111</countTo><i class="icon el-icon-message"></i></dd>
+                <dd><span>1011</span><i class="icon el-icon-message"></i></dd>
+                <dd><span>1011</span><i class="icon el-icon-message"></i></dd>
+            </dl>
+        </div>
+        <ul class="navbtn clearfix">
+            <router-link to="/table/tables" tag="li" class="green">表单和表格</router-link>
+
+            <router-link to="/theme/editor" tag="li" class="blue">基本组件</router-link>
+            <router-link to="/chart/line" tag="li" class="purple">图表</router-link>
+        </ul>
+    </div>
 </template>
 <style scoped>
-    .login{position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);border-radius: 10px;padding:20px;border:1px solid #0074e0;box-shadow: 12px 16px 23px #999;}
-    .login li{overflow: hidden;margin-bottom: 10px;}
-    .login span,.login input,.login label{float: left;}
-    .login span{width:56px;line-height: 28px;margin-right:6px;color: #0074e0;  }
-    .login input[type=checkbox]{width:16px;height:16px;background: #fff;position: relative;top:2px;margin-right: 4px;}
-    .login input[type=text]{border:1px solid #0074e0 !important;}
-    .btn-item .login-btn{width:100%;padding:2px 20px;float: none;margin-top: 20px;cursor: pointer;color: #fff;background:#0074e0;}
-    .btn-item{text-align: center;}
+    .userpic{border-radius: 50%;overflow: hidden;margin-right: 30px;}
+    .userpic img{border-radius: 50%;}
+    .statistics dt{font-size: 30px;font-weight: bold;line-height:50px;}
+    .statistics dd{line-height: 30px;}
+    .statistics span{font-size: 20px;margin-right: 20px;}
+    .statistics i{color: #999;}
+    .navbtn{margin:40px 0;}
+    .navbtn li{float:left;margin:0 16px;padding:10px 24px;border-radius: 5px;cursor: pointer;color: #fff;}
 </style>
 <script>
-    export default {
+
+    export default{
         data(){
-           return{
-               user:{
-                   name:'',
-                   password:''
-               }
-           }
+            return {
+                item:{
+                    table:123,
+                    form:4111,
+                    chart:555
+                }
+            }
         },
         methods:{
-            tologin(){
-                if(this.user.name&&this.user.password){
-                    this.$router.push({ path: '/' });
-                }else{
-                   alert('不能为空')
-                }
+            animate(num){
+               let n=0
+               let timer=setInterval(function(){
+                    n++;
+                   if(n==num){
+                       clearInterval(timer)
+                   }
+                },600);
+
             }
         }
     }

@@ -6,7 +6,7 @@
         <!--<div class="el-icon-d-arrow-right flexbtn fl" v-show="!leftnav" @click="leftnav=!leftnav"></div>-->
         <div class="el-icon-menu flexbtn fr" @click="toshownav()"></div>
         <div class="grid-content user fr">
-            <div class="username clearfix" @click="userlist=!userlist"><span>jeeny</span><img src="assets/pic.jpg" alt="" width="40" height="40"></div>
+            <div class="username clearfix" @click="userlist=!userlist"><span>jeeny</span><img src="../assets/pic.jpg" alt="" width="40" height="40"></div>
             <ul v-show="userlist">
                 <!--<li>首页</li>-->
                 <!--<li>退出</li>-->
@@ -17,7 +17,7 @@
     </el-row>
 </template>
 <style scoped>
-    .topbar{padding:5px 15px;background: #0074e0;}
+    .topbar{padding:5px 15px;background: #d3dce6;}
     .user{position: relative;}
     .user ul{position: absolute;top:45px;left:0;z-index:10;background: #fff;padding:6px 20px;border:1px solid #dfdfdf;border-radius: 3px;}
     .user li{line-height: 30px;cursor: pointer;}
