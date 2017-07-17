@@ -121,6 +121,13 @@
                ]
            }
         },
+        mounted(){
+            this.$http({
+                url:'../data/sidebar.json'
+            }).then(function(red){
+                console.log(res)
+            })
+        },
         methods:{
             isshow(index){
                 if(this.navlist[index].cur){
